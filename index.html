@@ -80,9 +80,12 @@
       color: var(--pink);
       text-transform: uppercase;
       text-shadow: 0 0 18px var(--pink), 0 0 40px var(--purple-mid);
-      cursor: default;
+      cursor: pointer;
       user-select: none;
+      transition: opacity 0.2s;
     }
+
+    .logo:hover { opacity: 0.8; }
 
     nav {
       display: flex;
@@ -94,8 +97,8 @@
       border: none;
       color: var(--muted);
       font-family: var(--font);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       padding: 8px 14px;
       cursor: pointer;
@@ -127,7 +130,7 @@
     main {
       flex: 1;
       margin-top: var(--nav-h);
-      padding: 48px 48px 120px;
+      padding: 48px 48px 145px;
     }
 
     main.home-mode {
@@ -148,8 +151,8 @@
 
     /* ─── SECTION HEADING ─────────────────────────────── */
     .section-title {
-      font-size: 0.7rem;
-      letter-spacing: 0.35em;
+      font-size: 0.88rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--purple-lit);
       margin-bottom: 36px;
@@ -183,8 +186,8 @@
     }
 
     .placeholder-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
       color: var(--muted);
       text-transform: uppercase;
       opacity: 0.6;
@@ -194,21 +197,23 @@
     .hero-overlay {
       position: absolute;
       bottom: 30px;
-      left: 24px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 2;
-      background: rgba(13, 0, 16, 0.65);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-left: 2px solid var(--pink);
-      padding: 14px 20px;
-      max-width: 560px;
+      background: rgba(4, 0, 7, 0.93);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-left: 3px solid var(--pink);
+      padding: 22px 30px;
+      max-width: 820px;
+      width: calc(100% - 48px);
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
 
     .bio-name {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       letter-spacing: 0.15em;
       color: var(--pink);
       text-shadow: 0 0 20px var(--pink);
@@ -222,20 +227,20 @@
     }
 
     .bio-tag {
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
       color: var(--muted);
-      padding: 4px 10px;
+      padding: 5px 12px;
       border: 1px solid var(--purple-dark);
       border-radius: 2px;
       text-transform: uppercase;
     }
 
     .bio-short {
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     .bio-divider {
@@ -244,16 +249,16 @@
     }
 
     .bio-software-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
       color: var(--purple-lit);
       text-transform: uppercase;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .studio-line {
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
+      font-size: 0.88rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--purple-lit);
     }
@@ -269,8 +274,8 @@
     }
 
     .email-line {
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
       color: var(--muted);
     }
 
@@ -291,9 +296,9 @@
       background: rgba(0, 180, 90, 0.15);
       border: 1px solid #00b45a;
       border-radius: 2px;
-      padding: 5px 12px;
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #5dffaa;
       width: fit-content;
@@ -317,14 +322,37 @@
     footer {
       position: fixed;
       bottom: 0; left: 0; right: 0;
-      height: 60px;
       background: rgba(13, 0, 16, 0.95);
       border-top: 1px solid var(--purple-dark);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 8px;
+      padding: 10px 16px 14px;
       z-index: 100;
+    }
+
+    .footer-credits {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      opacity: 0.82;
+    }
+
+    .footer-credits a {
+      color: var(--purple-lit);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .footer-credits a:hover { color: var(--pink); }
+
+    .footer-btns {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .socials-btn {
@@ -361,7 +389,8 @@
       z-index: 0;
     }
 
-    main, footer { position: relative; z-index: 1; }
+    main { position: relative; z-index: 1; }
+    footer { position: relative; z-index: 1; }
 
     /* ─── PROJECT SHOWCASE ─────────────────────────────── */
 
@@ -453,8 +482,8 @@
     }
 
     .feat-tag {
-      font-size: 0.54rem;
-      letter-spacing: 0.15em;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       padding: 3px 8px;
       border-radius: 2px;
@@ -489,8 +518,8 @@
     }
 
     .feat-role {
-      font-size: 0.67rem;
-      letter-spacing: 0.22em;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--purple-lit);
     }
@@ -510,15 +539,15 @@
     }
 
     .feat-stat-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--muted);
     }
 
     .feat-stat-value {
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
       color: var(--white);
     }
 
@@ -598,16 +627,16 @@
     }
 
     .item-title {
-      font-size: 0.7rem;
-      letter-spacing: 0.07em;
+      font-size: 0.84rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--white);
       line-height: 1.25;
     }
 
     .item-sub {
-      font-size: 0.57rem;
-      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
       color: var(--purple-lit);
     }
@@ -635,10 +664,11 @@
     /* ─── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 900px) {
       .hero-overlay {
-        left: 24px;
-        right: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 32px);
         max-width: none;
-        bottom: 72px;
+        bottom: 82px;
       }
     }
 
@@ -660,7 +690,7 @@
 
     @media (max-width: 680px) {
       header { padding: 0 16px; }
-      main   { padding: 32px 16px 100px; }
+      main   { padding: 32px 16px 130px; }
 
       .logo { font-size: 1rem; }
       .nav-toggle { display: block; }
@@ -829,6 +859,7 @@
       width: 100%;
       border-top: 1px solid var(--purple-dark);
       padding-top: 12px;
+      justify-content: center;
     }
 
     /* ─── MODEL SHOP STRIP ───────────────────────────────── */
@@ -939,12 +970,12 @@
     /* ─── SECTION TILE GRIDS (Art & Animation) ─────────── */
     .section-tile-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
 
     .section-tile-grid--single {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .section-tile {
@@ -1002,12 +1033,12 @@
 
     /* ─── HOME CONTENT (below hero) ──────────────────── */
     .home-content {
-      padding: 0 48px 120px;
+      padding: 0 48px 145px;
     }
 
     .home-section-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.35em;
+      font-size: 0.88rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--purple-lit);
       margin: 32px 0 18px;
@@ -1018,7 +1049,7 @@
     /* ── Work tile grid ── */
     .home-tile-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       justify-content: center;
       gap: 12px;
     }
@@ -1078,8 +1109,8 @@
     }
 
     @media (max-width: 680px) {
-      .home-content { padding: 0 16px 100px; }
-      .home-tile-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 8px; }
+      .home-content { padding: 0 16px 130px; }
+      .home-tile-grid { grid-template-columns: 1fr; gap: 8px; }
     }
     /* space between consecutive showcase groups */
     .showcase-body + .showcase-ticker,
@@ -1087,14 +1118,28 @@
 
     /* ─── SEGMENT LABEL (art sub-section headers) ────── */
     .segment-label {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--pink);
       margin-top: 48px;
       margin-bottom: 10px;
-      text-align: center;
       text-shadow: 0 0 18px var(--pink), 0 0 40px var(--purple-mid);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .segment-label::before {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to left, var(--purple-mid), transparent);
+    }
+    .segment-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--purple-mid), transparent);
     }
     .section-tile-grid + .segment-label,
     .showcase-body + .segment-label { margin-top: 48px; }
@@ -1106,28 +1151,35 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.92);
+      background: rgba(0, 0, 0, 0.94);
       z-index: 9999;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      overflow: hidden;
       cursor: zoom-out;
     }
     #lb-overlay.open {
       display: flex;
       animation: lbFadeIn 0.18s ease;
     }
+    #lb-overlay.panning { cursor: grab; }
+    #lb-overlay.panning-active { cursor: grabbing; }
     @keyframes lbFadeIn {
       from { opacity: 0; }
       to   { opacity: 1; }
     }
     #lb-img {
       max-width: 90vw;
-      max-height: 90vh;
+      max-height: 88vh;
       object-fit: contain;
       border: 1px solid rgba(155, 48, 217, 0.5);
       box-shadow: 0 0 80px rgba(106, 13, 173, 0.45);
-      cursor: default;
+      transform-origin: center center;
+      transform: translate(0, 0) scale(1);
+      user-select: none;
+      pointer-events: none;
+      display: block;
+      flex-shrink: 0;
     }
     #lb-close {
       position: absolute;
@@ -1142,8 +1194,38 @@
       opacity: 0.6;
       font-family: var(--font);
       transition: opacity 0.15s, color 0.15s;
+      z-index: 2;
     }
     #lb-close:hover { opacity: 1; color: var(--pink); }
+    #lb-hint {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(237, 230, 245, 0.35);
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 2;
+    }
+    #lb-zoom-level {
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: rgba(237, 230, 245, 0.5);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 2;
+    }
+    #lb-zoom-level.visible { opacity: 1; }
 
     /* ─── LITE YOUTUBE EMBED ────────────────────────────── */
     .yt-lite {
@@ -1182,7 +1264,7 @@
 
   <!-- ─── HEADER ──────────────────────────────────────── -->
   <header>
-    <div class="logo">ZOMIBOM</div>
+    <div class="logo" id="logo-home" role="button" tabindex="0" aria-label="Go to Home" title="Home">ZOMIBOM</div>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
     <nav id="main-nav">
       <button class="active" data-tab="home">Home</button>
@@ -1191,6 +1273,7 @@
       <button data-tab="animation">Animation</button>
       <button data-tab="3d">3D Modelling</button>
       <button data-tab="projects">Previous Projects</button>
+      <button data-tab="resume">Resume</button>
     </nav>
   </header>
 
@@ -1210,7 +1293,7 @@
           <div class="bio-tags">
             <span class="bio-tag">They / Them</span>
             <span class="bio-tag">26</span>
-            <span class="bio-tag">South Korean</span>
+            <span class="bio-tag">South Korea</span>
           </div>
 
           <div class="bio-short">
@@ -1271,7 +1354,7 @@
         </div></div>
 
         <div class="home-section-label">Demo Reel</div>
-        <div class="home-reel-frame" data-videoid="SJq3G4czSSo"></div>
+        <div class="home-reel-frame" data-videoid="34cGKiQhFYQ"></div>
 
         <div class="showcase-ticker"><div class="showcase-ticker-inner">
           <span>SELECTED WORKS</span><span>&#10022;</span>
@@ -1506,7 +1589,7 @@
       <div class="section-title">Animation</div>
 
       <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
-        <div class="home-reel-frame" data-videoid="SJq3G4czSSo"></div>
+        <div class="home-reel-frame" data-videoid="34cGKiQhFYQ"></div>
       </div>
 
       <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;">
@@ -1578,6 +1661,7 @@
           auto-rotate-delay="1500"
           shadow-intensity="0.9"
           interaction-prompt="none"
+          min-field-of-view="12deg"
           style="width:100%;height:100%;background-color:#180020;">
         </model-viewer>
         <div class="viewer-ph" id="viewer-ph" style="display:none;">
@@ -1604,10 +1688,10 @@
       </div></div>
       <div style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Software used: Blender</div>
       <div class="section-tile-grid section-tile-grid--natural">
-        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%201%20wireframe.png" alt="Room 1 Wireframe" /></div>
-        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%201%20colorbox.png" alt="Room 1 Colorbox" /></div>
         <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%202%20graybox.png" alt="Room 2 Graybox" /></div>
         <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%202%20wireframe.png" alt="Room 2 Wireframe" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%201%20wireframe.png" alt="Room 1 Wireframe" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%201%20colorbox.png" alt="Room 1 Colorbox" /></div>
       </div>
 
       <!-- ── Items ─────────────────────────────────────────────── -->
@@ -1849,20 +1933,36 @@
 
     </section>
 
+    <!-- RESUME -->
+    <section id="resume">
+      <div class="section-title">Resume</div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;">
+        <a class="socials-btn" href="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Zomi%20CV%202025.pdf" target="_blank" rel="noopener noreferrer" download style="display:inline-flex;align-items:center;gap:8px;">&#x2913; Download PDF</a>
+        <a class="socials-btn" href="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Zomi%20CV%202025.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;">&#9654; Open Full Screen</a>
+      </div>
+      <iframe
+        src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Zomi%20CV%202025.pdf"
+        title="Resume / CV"
+        style="width:100%;height:80vh;border:1px solid var(--purple-dark);border-radius:4px;background:var(--bg-mid);display:block;">
+      </iframe>
+    </section>
+
   </main>
 
   <!-- ─── FOOTER ───────────────────────────────────────── -->
-  <div style="text-align:center;padding:6px 0 2px;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);opacity:0.5;">Code by ZOMIBOM &nbsp;·&nbsp; <a id="refs-link" href="#" style="color:inherit;text-decoration:underline;cursor:pointer;">References Used</a></div>
   <footer>
-    <a class="socials-btn" href="https://z0mibom.carrd.co/" target="_blank" rel="noopener noreferrer">
-      ✦ Socials
-    </a>
-    <a class="socials-btn" href="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Zomi%20CV%202025.pdf" target="_blank" rel="noopener noreferrer" download>
-      &#x2913; CV
-    </a>
-    <a class="socials-btn" href="mailto:zomibom.animator@gmail.com">
-      ✉ Contact
-    </a>
+    <div class="footer-credits">Code by ZOMIBOM &nbsp;&middot;&nbsp; <a id="refs-link" href="#">References Used</a></div>
+    <div class="footer-btns">
+      <a class="socials-btn" href="https://z0mibom.carrd.co/" target="_blank" rel="noopener noreferrer">
+        ✦ Socials
+      </a>
+      <a class="socials-btn" href="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Zomi%20CV%202025.pdf" target="_blank" rel="noopener noreferrer" download>
+        &#x2913; CV
+      </a>
+      <a class="socials-btn" href="mailto:zomibom.animator@gmail.com">
+        ✉ Contact
+      </a>
+    </div>
   </footer>
 
   <!-- ─── TAB SWITCHING ────────────────────────────────── -->
@@ -1905,6 +2005,26 @@
       setHomeMode(target === 'home');
       window.scrollTo(0, 0);
     });
+
+    // ─── LOGO → HOME ────────────────────────────────────────────
+    (function () {
+      var logoEl = document.getElementById('logo-home');
+      if (!logoEl) return;
+      function goHome() {
+        tabs.forEach(function (t) { t.classList.remove('active'); });
+        var homeBtn = nav.querySelector('[data-tab="home"]');
+        if (homeBtn) homeBtn.classList.add('active');
+        sections.forEach(function (s) {
+          s.classList.toggle('active', s.id === 'home');
+        });
+        setHomeMode(true);
+        window.scrollTo(0, 0);
+      }
+      logoEl.addEventListener('click', goHome);
+      logoEl.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goHome(); }
+      });
+    }());
 
     // ─── LITE EMBED HELPER ──────────────────────────────────────
     // Shows a crisp thumbnail + play button; swaps for real iframe on click
@@ -2513,48 +2633,147 @@
     }());
 
     // ─── LIGHTBOX ────────────────────────────────────────
-    (function () {
+    document.addEventListener('DOMContentLoaded', function () {
       var overlay = document.getElementById('lb-overlay');
       var lbImg   = document.getElementById('lb-img');
       var lbClose = document.getElementById('lb-close');
+      var lbZoom  = document.getElementById('lb-zoom-level');
       if (!overlay) return;
+
+      var MIN_SCALE = 1, MAX_SCALE = 10;
+      var scale = 1, tx = 0, ty = 0;
+      var isDragging = false, hasDragged = false;
+      var dragStartX = 0, dragStartY = 0, dragStartTx = 0, dragStartTy = 0;
+      var zoomTimer = null;
+
+      function applyTransform(animate) {
+        lbImg.style.transition = animate ? 'transform 0.15s ease' : 'none';
+        lbImg.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+        if (lbZoom) {
+          lbZoom.textContent = Math.round(scale * 100) + '%';
+          lbZoom.classList.add('visible');
+          clearTimeout(zoomTimer);
+          zoomTimer = setTimeout(function () { lbZoom.classList.remove('visible'); }, 900);
+        }
+        overlay.classList.toggle('panning', scale > 1 && !isDragging);
+        overlay.classList.toggle('panning-active', isDragging);
+      }
+
+      function resetZoom(animate) {
+        scale = 1; tx = 0; ty = 0;
+        applyTransform(animate);
+        overlay.classList.remove('panning', 'panning-active');
+      }
 
       function open(src, alt) {
         lbImg.src = src;
         lbImg.alt = alt || '';
+        scale = 1; tx = 0; ty = 0;
+        lbImg.style.transition = 'none';
+        lbImg.style.transform = 'translate(0,0) scale(1)';
         overlay.classList.add('open');
+        overlay.classList.remove('panning', 'panning-active');
         document.body.style.overflow = 'hidden';
       }
 
       function close() {
-        overlay.classList.remove('open');
+        overlay.classList.remove('open', 'panning', 'panning-active');
         lbImg.src = '';
+        scale = 1; tx = 0; ty = 0;
         document.body.style.overflow = '';
       }
 
-      lbClose.addEventListener('click', close);
-      overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) close();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') close();
+      // Scroll wheel zoom — centred on cursor
+      overlay.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        var factor = e.deltaY < 0 ? 1.15 : 0.87;
+        var newScale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, scale * factor));
+        if (newScale === scale) return;
+        var rect = overlay.getBoundingClientRect();
+        var cx = e.clientX - rect.left - rect.width  / 2;
+        var cy = e.clientY - rect.top  - rect.height / 2;
+        var ratio = newScale / scale;
+        tx = cx - ratio * (cx - tx);
+        ty = cy - ratio * (cy - ty);
+        scale = newScale;
+        applyTransform(false);
+      }, { passive: false });
+
+      // Drag to pan when zoomed
+      overlay.addEventListener('mousedown', function (e) {
+        if (e.target === lbClose) return;
+        if (scale <= 1) return;
+        isDragging = true; hasDragged = false;
+        dragStartX = e.clientX; dragStartY = e.clientY;
+        dragStartTx = tx; dragStartTy = ty;
+        applyTransform(false);
+        e.preventDefault();
       });
 
-      // Attach to all content images
-      document.querySelectorAll('.section-tile img, .home-content img').forEach(function (img) {
+      window.addEventListener('mousemove', function (e) {
+        if (!isDragging) return;
+        var dx = e.clientX - dragStartX;
+        var dy = e.clientY - dragStartY;
+        if (Math.abs(dx) > 2 || Math.abs(dy) > 2) hasDragged = true;
+        tx = dragStartTx + dx;
+        ty = dragStartTy + dy;
+        applyTransform(false);
+      });
+
+      window.addEventListener('mouseup', function () {
+        if (!isDragging) return;
+        isDragging = false;
+        applyTransform(false);
+      });
+
+      // Double-click: reset if zoomed, zoom 2x if at base
+      overlay.addEventListener('dblclick', function (e) {
+        if (e.target === lbClose) return;
+        if (scale > 1) {
+          resetZoom(true);
+        } else {
+          var rect = overlay.getBoundingClientRect();
+          var cx = e.clientX - rect.left - rect.width  / 2;
+          var cy = e.clientY - rect.top  - rect.height / 2;
+          scale = 2; tx = -cx; ty = -cy;
+          applyTransform(true);
+        }
+      });
+
+      // Click backdrop to close (only when not zoomed)
+      overlay.addEventListener('click', function (e) {
+        if (hasDragged) { hasDragged = false; return; }
+        if (e.target === lbClose) return;
+        if (scale > 1) return;
+        close();
+      });
+
+      lbClose.addEventListener('click', close);
+
+      document.addEventListener('keydown', function (e) {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === '0') resetZoom(true);
+      });
+
+      // Attach to all content images — skip hero bg and showcase video thumbnails
+      document.querySelectorAll('main img').forEach(function (img) {
+        if (img.closest('.home-hero') || img.closest('.item-thumb') || img.closest('.model-card-thumb')) return;
         img.style.cursor = 'zoom-in';
         img.addEventListener('click', function (e) {
           e.stopPropagation();
           open(this.src, this.alt);
         });
       });
-    }());
+    });
   </script>
 
   <!-- ─── LIGHTBOX OVERLAY ─────────────────────────────── -->
   <div id="lb-overlay" role="dialog" aria-modal="true" aria-label="Image viewer">
     <button id="lb-close" aria-label="Close">&#x2715;</button>
+    <div id="lb-zoom-level">100%</div>
     <img id="lb-img" src="" alt="" />
+    <div id="lb-hint">Scroll to zoom &nbsp;&middot;&nbsp; Drag to pan &nbsp;&middot;&nbsp; Double-click to reset &nbsp;&middot;&nbsp; Esc to close</div>
   </div>
 
   <!-- ─── REFERENCES MODAL ─────────────────────────────── -->
