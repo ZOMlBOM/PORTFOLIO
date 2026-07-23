@@ -1,0 +1,2625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZOMIBOM — Portfolio</title>
+  <!-- ─── Social / SEO meta ─────────────────────────── -->
+  <meta name="description" content="ZOMIBOM — Artist, Animator, Storyboard Artist, 3D Modeller &amp; Concept Artist. Co-producer &amp; Artist at Kappapon Studios." />
+  <meta property="og:title" content="ZOMIBOM — Portfolio" />
+  <meta property="og:description" content="Artist · Animator · Storyboard Artist · 3D Modeller · Concept Artist. Co-producer &amp; Artist at Kappapon Studios." />
+  <meta property="og:image" content="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/BLACK%20MAMBA_2026.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZOMIBOM — Portfolio" />
+  <meta name="twitter:description" content="Artist · Animator · Storyboard Artist · 3D Modeller · Concept Artist." />
+  <meta name="twitter:image" content="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/BLACK%20MAMBA_2026.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23220030'/><text x='50' y='74' text-anchor='middle' font-size='68' font-family='monospace' fill='%23e040fb'>Z</text></svg>" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-deep:    #0d0010;
+      --bg-mid:     #180020;
+      --bg-card:    #220030;
+      --purple-dark:#3a0060;
+      --purple-mid: #6a0dad;
+      --purple-lit: #9b30d9;
+      --pink:       #e040fb;
+      --pink-soft:  #f48fb1;
+      --white:      #ffffff;
+      --muted:      #ede6f5;
+      --font:       'Share Tech Mono', 'Courier New', monospace;
+      --nav-h:      64px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--white);
+      font-family: var(--font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── SCROLLBAR ───────────────────────────────────── */
+    ::-webkit-scrollbar { width: 14px; }
+    ::-webkit-scrollbar-track { background: var(--bg-deep); }
+    ::-webkit-scrollbar-thumb { background: var(--purple-mid); border-radius: 5px; }
+
+    /* ─── HEADER / NAV ────────────────────────────────── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(13, 0, 16, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--purple-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      color: var(--pink);
+      text-transform: uppercase;
+      text-shadow: 0 0 18px var(--pink), 0 0 40px var(--purple-mid);
+      cursor: default;
+      user-select: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 4px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-family: var(--font);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    nav button::after {
+      content: '';
+      position: absolute;
+      bottom: 2px; left: 14px; right: 14px;
+      height: 2px;
+      background: var(--pink);
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+    }
+
+    nav button:hover { color: var(--white); }
+    nav button:hover::after { transform: scaleX(0.6); }
+
+    nav button.active {
+      color: var(--pink);
+    }
+    nav button.active::after {
+      transform: scaleX(1);
+    }
+
+    /* ─── MAIN / SECTIONS ─────────────────────────────── */
+    main {
+      flex: 1;
+      margin-top: var(--nav-h);
+      padding: 48px 48px 120px;
+    }
+
+    main.home-mode {
+      margin-top: 0;
+      padding: 0;
+    }
+
+    section {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    section.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── SECTION HEADING ─────────────────────────────── */
+    .section-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--purple-lit);
+      margin-bottom: 36px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--purple-dark);
+    }
+
+    /* ─── HOME ────────────────────────────────────────── */
+    .home-hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: var(--bg-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .home-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .placeholder-icon {
+      font-size: 2rem;
+      opacity: 0.3;
+    }
+
+    .placeholder-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    /* overlay text — bottom left */
+    .hero-overlay {
+      position: absolute;
+      bottom: 30px;
+      left: 24px;
+      z-index: 2;
+      background: rgba(13, 0, 16, 0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-left: 2px solid var(--pink);
+      padding: 14px 20px;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .bio-name {
+      font-size: 1.2rem;
+      letter-spacing: 0.15em;
+      color: var(--pink);
+      text-shadow: 0 0 20px var(--pink);
+      text-transform: uppercase;
+    }
+
+    .bio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .bio-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      padding: 4px 10px;
+      border: 1px solid var(--purple-dark);
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+
+    .bio-short {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .bio-divider {
+      height: 1px;
+      background: var(--purple-dark);
+    }
+
+    .bio-software-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      color: var(--purple-lit);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .studio-line {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--purple-lit);
+    }
+
+    .studio-line span {
+      color: var(--pink);
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .email-line {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .email-line a {
+      color: var(--pink);
+      text-decoration: none;
+    }
+
+    .email-line a:hover {
+      text-decoration: underline;
+      color: var(--pink);
+    }
+
+    .comm-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 180, 90, 0.15);
+      border: 1px solid #00b45a;
+      border-radius: 2px;
+      padding: 5px 12px;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #5dffaa;
+      width: fit-content;
+    }
+
+    .comm-dot {
+      width: 6px; height: 6px;
+      background: #00b45a;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px #00b45a;
+    }
+
+    /* video overlay icon */
+    .play-icon {
+      font-size: 2.5rem;
+      opacity: 0.35;
+    }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: rgba(13, 0, 16, 0.95);
+      border-top: 1px solid var(--purple-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      z-index: 100;
+    }
+
+    .socials-btn {
+      font-family: var(--font);
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--pink);
+      background: none;
+      border: 1px solid var(--pink);
+      padding: 10px 32px;
+      border-radius: 2px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+
+    .socials-btn:hover {
+      background: var(--pink);
+      color: var(--bg-deep);
+      box-shadow: 0 0 24px var(--pink);
+    }
+
+    /* ─── GLOW GRADIENT BG ACCENT ─────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(ellipse at center, rgba(106, 13, 173, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    main, footer { position: relative; z-index: 1; }
+
+    /* ─── PROJECT SHOWCASE ─────────────────────────────── */
+
+    .showcase-ticker {
+      border-top: 1px solid rgba(106, 13, 173, 0.35);
+      border-bottom: 1px solid rgba(106, 13, 173, 0.35);
+      padding: 6px 0;
+      background: rgba(18, 0, 26, 0.85);
+    }
+
+    .showcase-ticker-inner {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .showcase-ticker-inner span {
+      font-size: 0.58rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(155, 48, 217, 0.6);
+      padding: 0 20px;
+    }
+
+    .showcase-body {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0 16px;
+      align-items: flex-start;
+    }
+
+    /* ── FEATURED PANEL ── */
+    .showcase-featured {
+      flex: 0 0 440px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feat-cover {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--bg-mid);
+      border: 1px solid var(--purple-dark);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 0 40px rgba(106, 13, 173, 0.2);
+      transition: opacity 0.22s ease;
+    }
+
+    .feat-cover iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* large decorative index number — bottom-left corner of cover */
+    .feat-number {
+      position: absolute;
+      bottom: -8px;
+      left: -3px;
+      font-size: 6.5rem;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(155, 48, 217, 0.28);
+      user-select: none;
+      pointer-events: none;
+      z-index: 1;
+      letter-spacing: -0.04em;
+    }
+
+    /* tags — top-left corner of cover */
+    .feat-tags {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      z-index: 2;
+    }
+
+    .feat-tag {
+      font-size: 0.54rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+      background: rgba(22, 0, 32, 0.82);
+      color: var(--muted);
+      border: 1px solid var(--purple-dark);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .feat-tag.accent {
+      background: rgba(224, 64, 251, 0.18);
+      color: var(--pink);
+      border-color: var(--pink);
+    }
+
+    .feat-info {
+      padding-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      transition: opacity 0.22s ease;
+    }
+
+    .feat-title {
+      font-size: 1.55rem;
+      line-height: 1.1;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-shadow: 0 0 28px rgba(224, 64, 251, 0.2);
+    }
+
+    .feat-role {
+      font-size: 0.67rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--purple-lit);
+    }
+
+    .feat-stats {
+      margin-top: 10px;
+      border-top: 1px solid var(--purple-dark);
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .feat-stat {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .feat-stat-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .feat-stat-value {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--white);
+    }
+
+    /* ── THUMBNAIL LIST ── */
+    .showcase-list {
+      flex: 1;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 6px;
+      scrollbar-width: auto;
+      scrollbar-color: var(--purple-mid) transparent;
+      cursor: grab;
+    }
+    .showcase-list:active { cursor: grabbing; }
+    .showcase-list::-webkit-scrollbar { height: 14px; }
+    .showcase-list::-webkit-scrollbar-thumb { background: var(--purple-mid); border-radius: 5px; }
+
+    .showcase-item {
+      flex: 0 0 150px;
+      cursor: pointer;
+      border: 1px solid var(--purple-dark);
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+      transition: border-color 0.2s ease,
+                  transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.3s ease;
+    }
+
+    .showcase-item:hover {
+      border-color: var(--purple-lit);
+      transform: translateY(-6px);
+      box-shadow: 0 14px 32px rgba(106, 13, 173, 0.4);
+    }
+
+    .showcase-item.active {
+      border-color: var(--pink);
+      box-shadow: 0 0 22px rgba(224, 64, 251, 0.4);
+    }
+
+    .item-thumb {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      background: var(--bg-mid);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .item-thumb img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(13, 0, 16, 0.92) 0%,
+        rgba(13, 0, 16, 0.15) 55%,
+        transparent 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
+      gap: 3px;
+    }
+
+    .item-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.25;
+    }
+
+    .item-sub {
+      font-size: 0.57rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--purple-lit);
+    }
+
+    .item-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: var(--pink);
+      color: var(--bg-deep);
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 1px;
+      box-shadow: 0 0 10px rgba(224, 64, 251, 0.6);
+    }
+
+    @media (max-width: 900px) {
+      .showcase-body    { flex-direction: column; }
+      .showcase-featured { flex: none; width: 100%; }
+    }
+
+    /* ─── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-overlay {
+        left: 24px;
+        right: 24px;
+        max-width: none;
+        bottom: 72px;
+      }
+    }
+
+    /* ─── NAV TOGGLE (mobile) ──────────────────────────── */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--purple-dark);
+      color: var(--muted);
+      font-family: var(--font);
+      font-size: 1.1rem;
+      padding: 5px 11px;
+      cursor: pointer;
+      border-radius: 2px;
+      line-height: 1;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav-toggle:hover { border-color: var(--pink); color: var(--pink); }
+
+    @media (max-width: 680px) {
+      header { padding: 0 16px; }
+      main   { padding: 32px 16px 100px; }
+
+      .logo { font-size: 1rem; }
+      .nav-toggle { display: block; }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: var(--nav-h);
+        left: 0; right: 0;
+        flex-direction: column;
+        background: rgba(13, 0, 16, 0.97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--purple-dark);
+        padding: 6px 0 10px;
+        gap: 0;
+        z-index: 99;
+      }
+      nav.open { display: flex; }
+
+      nav button {
+        width: 100%;
+        text-align: left;
+        font-size: 0.72rem;
+        padding: 12px 24px;
+        letter-spacing: 0.1em;
+        border-bottom: 1px solid rgba(58, 0, 96, 0.25);
+      }
+      nav button::after { display: none; }
+
+    }
+
+    /* ─── 3D VIEWER ───────────────────────────────── */
+    .viewer-wrap {
+      width: 100%;
+      max-width: 1200px;
+      aspect-ratio: 16 / 9;
+      background: var(--bg-mid);
+      border: 1px solid var(--purple-dark);
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 36px;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .viewer-wrap.drag-over {
+      border-color: var(--pink);
+      box-shadow: 0 0 28px rgba(224, 64, 251, 0.35);
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-mid);
+      --progress-bar-color: var(--pink);
+    }
+
+    .viewer-ph {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      text-align: center;
+      padding: 24px;
+      pointer-events: none;
+    }
+
+    .viewer-ph-icon  { font-size: 3rem; opacity: 0.22; }
+
+    .viewer-ph-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--purple-lit);
+    }
+
+    .viewer-ph-desc {
+      font-size: 0.66rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .viewer-ph-desc code {
+      color: var(--pink);
+      background: rgba(224, 64, 251, 0.1);
+      padding: 1px 6px;
+      border-radius: 2px;
+    }
+
+    .viewer-ph-hint {
+      font-size: 0.57rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(155, 48, 217, 0.45);
+    }
+
+    .viewer-load-btn {
+      pointer-events: all;
+      font-family: var(--font);
+      font-size: 0.63rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pink);
+      background: none;
+      border: 1px solid var(--pink);
+      padding: 8px 22px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .viewer-load-btn:hover {
+      background: var(--pink);
+      color: var(--bg-deep);
+    }
+
+    /* ─── GALLERY SHOWCASE OVERRIDES ────────────────────── */
+    .feat-cover img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Storyboards — video centered, thumbnails along the bottom (same as Projects) */
+    #storyboards .showcase-body {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #storyboards .showcase-featured {
+      flex: none;
+      width: 100%;
+      max-width: 860px;
+    }
+
+    #storyboards .showcase-list {
+      flex: none;
+      width: 100%;
+      border-top: 1px solid var(--purple-dark);
+      padding-top: 12px;
+      justify-content: center;
+    }
+
+    /* Storyboard thumbnails — portrait 2:3, same as Previous Projects */
+    #storyboards .item-thumb { aspect-ratio: 2 / 3; }
+    #projects .showcase-body {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #projects .showcase-featured {
+      flex: none;
+      width: 100%;
+      max-width: 860px;
+    }
+
+    #projects .showcase-list {
+      flex: none;
+      width: 100%;
+      border-top: 1px solid var(--purple-dark);
+      padding-top: 12px;
+    }
+
+    /* ─── MODEL SHOP STRIP ───────────────────────────────── */
+    .model-shop { margin-top: 20px; }
+
+    .model-shop-header {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--purple-lit);
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--purple-dark);
+    }
+
+    .model-shop-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 2px 12px;
+      scrollbar-width: auto;
+      scrollbar-color: var(--purple-dark) transparent;
+    }
+
+    .model-shop-row::-webkit-scrollbar { height: 14px; }
+    .model-shop-row::-webkit-scrollbar-thumb { background: var(--purple-mid); border-radius: 5px; }
+
+    .model-card {
+      flex: 0 0 110px;
+      background: var(--bg-card);
+      border: 1px solid var(--purple-dark);
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s ease,
+                  transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.2s ease;
+    }
+
+    .model-card:hover {
+      border-color: var(--purple-lit);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(106, 13, 173, 0.38);
+    }
+
+    .model-card.active {
+      border-color: var(--pink);
+      box-shadow: 0 0 18px rgba(224, 64, 251, 0.42);
+    }
+
+    .model-card-thumb {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: var(--bg-mid);
+      border-bottom: 1px solid var(--purple-dark);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .model-card-thumb img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .model-card-body {
+      padding: 8px 8px 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .model-card-name {
+      font-size: 0.6rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .model-card-stat {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.57rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      border-top: 1px solid var(--purple-dark);
+      padding-top: 5px;
+    }
+
+    .model-card-stat-icon {
+      color: var(--pink);
+      font-size: 0.6rem;
+      text-shadow: 0 0 5px var(--pink);
+    }
+
+    /* ─── SECTION TILE GRIDS (Art & Animation) ─────────── */
+    .section-tile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+      gap: 12px;
+    }
+
+    .section-tile-grid--single {
+      grid-template-columns: 1fr;
+    }
+
+    .section-tile {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--purple-dark);
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #art .section-tile       { aspect-ratio: unset; height: auto; }
+    #animation .section-tile { aspect-ratio: 16 / 9; }
+
+    .section-tile img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* natural-size tiles — image sets its own dimensions */
+    #art .section-tile img,
+    .section-tile-grid--natural .section-tile img {
+      position: static;
+      width: 100%;
+      height: auto;
+      object-fit: unset;
+    }
+
+    .section-tile iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .section-tile-ph {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @media (max-width: 700px) {
+      .section-tile-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── HOME CONTENT (below hero) ──────────────────── */
+    .home-content {
+      padding: 0 48px 120px;
+    }
+
+    .home-section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--purple-lit);
+      margin: 32px 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--purple-dark);
+    }
+
+    /* ── Work tile grid ── */
+    .home-tile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .home-tile {
+      aspect-ratio: 1 / 1;
+      background: var(--bg-card);
+      border: 1px solid var(--purple-dark);
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .home-tile img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .home-tile-ph {
+      font-size: 1.5rem;
+      opacity: 0.2;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ── Demo reel ── */
+    .home-reel-frame {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      background: var(--bg-mid);
+      border: 1px solid var(--purple-dark);
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 0 40px rgba(106, 13, 173, 0.15);
+    }
+
+    .home-reel-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 680px) {
+      .home-content { padding: 0 16px 100px; }
+      .home-tile-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 8px; }
+    }
+    /* space between consecutive showcase groups */
+    .showcase-body + .showcase-ticker,
+    .section-tile-grid + .showcase-ticker { margin-top: 32px; }
+
+    /* ─── SEGMENT LABEL (art sub-section headers) ────── */
+    .segment-label {
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-top: 48px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-shadow: 0 0 18px var(--pink), 0 0 40px var(--purple-mid);
+    }
+    .section-tile-grid + .segment-label,
+    .showcase-body + .segment-label { margin-top: 48px; }
+    .segment-label:first-of-type,
+    .section-title + .segment-label { margin-top: 0; }
+
+    /* ─── LIGHTBOX ────────────────────────────────────── */
+    #lb-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      cursor: zoom-out;
+    }
+    #lb-overlay.open {
+      display: flex;
+      animation: lbFadeIn 0.18s ease;
+    }
+    @keyframes lbFadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    #lb-img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border: 1px solid rgba(155, 48, 217, 0.5);
+      box-shadow: 0 0 80px rgba(106, 13, 173, 0.45);
+      cursor: default;
+    }
+    #lb-close {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+      opacity: 0.6;
+      font-family: var(--font);
+      transition: opacity 0.15s, color 0.15s;
+    }
+    #lb-close:hover { opacity: 1; color: var(--pink); }
+
+    /* ─── LITE YOUTUBE EMBED ────────────────────────────── */
+    .yt-lite {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-mid) center/cover no-repeat;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+    .yt-lite-play {
+      width: 68px;
+      height: 48px;
+      background: #ff0000;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #fff;
+      transition: transform 0.15s ease, background 0.15s ease;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.55);
+    }
+    .yt-lite:hover .yt-lite-play {
+      transform: scale(1.12);
+      background: #cc0000;
+    }
+
+  </style>
+  <!-- model-viewer web component (3D section interactive viewer) -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <!-- ─── HEADER ──────────────────────────────────────── -->
+  <header>
+    <div class="logo">ZOMIBOM</div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <nav id="main-nav">
+      <button class="active" data-tab="home">Home</button>
+      <button data-tab="art">Art</button>
+      <button data-tab="storyboards">Storyboards</button>
+      <button data-tab="animation">Animation</button>
+      <button data-tab="3d">3D Modelling</button>
+      <button data-tab="projects">Previous Projects</button>
+    </nav>
+  </header>
+
+  <!-- ─── MAIN ────────────────────────────────────────── -->
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="active">
+      <div class="home-hero">
+
+        <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/BLACK%20MAMBA_2026.png" alt="Black Mamba 2026" style="object-position:center top;" />
+
+        <!-- Bio overlay — bottom left -->
+        <div class="hero-overlay">
+          <div class="bio-name">ZOMIBOM</div>
+
+          <div class="bio-tags">
+            <span class="bio-tag">They / Them</span>
+            <span class="bio-tag">26</span>
+            <span class="bio-tag">South Korean</span>
+          </div>
+
+          <div class="bio-short">
+            Artist &nbsp;·&nbsp; Animator &nbsp;·&nbsp; Comic Artist<br/>
+            Storyboard Artist &nbsp;·&nbsp; 3D Modeller<br/>
+            Concept Artist
+          </div>
+
+          <div class="bio-divider"></div>
+
+          <div class="studio-line">
+            Co-producer &amp; Artist<br/>
+            <span>Kappapon Studios</span>
+          </div>
+
+          <div class="bio-divider"></div>
+
+          <div class="bio-software">
+            <div class="bio-software-label">SOFTWARE</div>
+            <div class="bio-tags" style="margin-top:4px;">
+              <span class="bio-tag">Clip Studio Paint EX</span>
+              <span class="bio-tag">Toon Boom Harmony 24</span>
+              <span class="bio-tag">Storyboard Pro 24</span>
+              <span class="bio-tag">Blender</span>
+              <span class="bio-tag">DaVinci Resolve</span>
+              <span class="bio-tag">TVPaint</span>
+              <span class="bio-tag">Moho</span>
+              <span class="bio-tag">Visual Studio Code</span>
+              <span class="bio-tag">Ren'Py</span>
+              <span class="bio-tag">Godot</span>
+              <span class="bio-tag">Unity</span>
+            </div>
+          </div>
+
+          <div class="bio-divider"></div>
+
+          <div class="contact-row">
+            <div class="email-line">
+              Contact: <a href="mailto:zomibom.animator@gmail.com">zomibom.animator@gmail.com</a>
+            </div>
+            <div class="comm-badge">
+              <div class="comm-dot"></div>
+              Looking for Fulltime / Part Time Work
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Work samples + demo reel ─────────────────── -->
+      <div class="home-content">
+
+        <div class="showcase-ticker"><div class="showcase-ticker-inner">
+          <span>DEMO REEL</span><span>&#10022;</span>
+          <span>ZOMIBOM</span><span>&#10022;</span>
+          <span>ANIMATION</span><span>&#10022;</span>
+          <span>2026</span><span>&#10022;</span>
+        </div></div>
+
+        <div class="home-section-label">Demo Reel</div>
+        <div class="home-reel-frame" data-videoid="SJq3G4czSSo"></div>
+
+        <div class="showcase-ticker"><div class="showcase-ticker-inner">
+          <span>SELECTED WORKS</span><span>&#10022;</span>
+          <span>ZOMIBOM</span><span>&#10022;</span>
+          <span>PORTFOLIO</span><span>&#10022;</span>
+          <span>KAPPAPON STUDIOS</span><span>&#10022;</span>
+        </div></div>
+
+        <div class="home-section-label">Selected Works</div>
+        <div style="display:flex;gap:12px;max-width:1400px;margin:0 auto;">
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/LETS%20KILL%20TONIGHT%20MAP%20GIF.gif"
+               alt="Let's Kill Tonight MAP"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/MISSY%20MAP%202026%20GIF.gif"
+               alt="Missy MAP 2026"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        </div>
+        <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;">
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/LOLLIA%20TRANSFORMATION.gif"
+               alt="Lollia Transformation"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/RYAN%20TEST%20GIF.gif"
+               alt="Ryan Test"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        </div>
+        <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;">
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/MIDAUTUMN%20GIF.gif"
+               alt="Midautumn"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/KORY%20TEST%20GIF.gif"
+               alt="Kory Test"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        </div>
+        <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;align-items:flex-start;">
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/2026%20-%20corey%20wilder%20-%20Commission.png"
+               alt="Corey Wilder Commission"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/BLACK%20MAMBA_2026.png"
+               alt="Black Mamba 2026"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        </div>
+        <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;align-items:flex-start;">
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/2026%20-%20Strobtruppen%20-%20Commission.png"
+               alt="Strobtruppen Commission"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/2026_draculaura_ZOMIBOM_promo.png"
+               alt="Draculaura Promo 2026"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        </div>
+        <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;align-items:flex-start;">
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/2026_tancrede%20and%20dante.png"
+               alt="Tancrede and Dante"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/DND%20FEATHER%20FALLING%20RENDER%20SHADOW.png"
+               alt="DnD Feather Falling Render"
+               style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ART -->
+    <section id="art">
+      <div class="section-title">Art</div>
+      <div style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;">Software used: Clip Studio Paint</div>
+
+      <!-- ── Character Art ───────────────────────────────────── -->
+      <div class="segment-label">Character Art</div>
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>CHARACTER ART</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>DIGITAL</span><span>&#10022;</span>
+        <span>CHARACTER DESIGN</span><span>&#10022;</span>
+      </div></div>
+      <div class="section-tile-grid section-tile-grid--single">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/MILO%20LURON_REF%20SHEET_2026.png" alt="Milo Luron Ref Sheet 2026" style="width:90%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Refsheet_CoraMadden_ShrapnelShard_2026.png" alt="Cora Madden Ref Sheet 2026" style="width:70%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Lisa%20Ngome_Expression%20sheet_ShrapnelShard_2026.png" alt="Lisa Ngome Expression Sheet 2026" style="width:70%;" /></div>
+      </div>
+      <div class="section-tile-grid">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/2026_REF_Sandy%20Maddox.png" alt="Sandy Maddox Ref 2026" style="width:90%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/chariott_2026.png" alt="Chariott 2026" style="width:80%;" /></div>
+      </div>
+
+      <!-- ── Concept Art ─────────────────────────────────────── -->
+      <div class="segment-label">Concept Art</div>
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>CONCEPT ART</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>DIGITAL</span><span>&#10022;</span>
+        <span>CONCEPT DESIGN</span><span>&#10022;</span>
+      </div></div>
+      <div class="section-tile-grid">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/CM%20concept%20art%202.png" alt="CM Concept Art 2" style="width:90%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/CM%20concept%20art%201.png" alt="CM Concept Art 1" style="width:90%;" /></div>
+      </div>
+      <div class="section-tile-grid section-tile-grid--single">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/trail%20cam%20scotch%20clear.png" alt="Trail Cam Scotch Clear" style="width:80%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Cherubs%20.png" alt="Cherubs" style="width:40%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/POSTERS%20concept%20art.png" alt="Posters Concept Art" style="width:90%;" /></div>
+      </div>
+
+      <!-- ── Illustrations ─────────────────────────────────────── -->
+      <div class="segment-label">Illustrations</div>
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>ILLUSTRATIONS</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>DIGITAL</span><span>&#10022;</span>
+        <span>EDITORIAL</span><span>&#10022;</span>
+      </div></div>
+      <div class="section-tile-grid section-tile-grid--single">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/2026_tancrede%20and%20dante.png" alt="Tancrede and Dante" style="width:50%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/2026%20-%20corey%20wilder%20-%20Commission.png" alt="Corey Wilder Commission" style="width:80%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/2026%20-%20Strobtruppen%20-%20Commission.png" alt="Strobtruppen Commission" style="width:80%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/BLACK%20MAMBA_2026.png" alt="Black Mamba 2026" style="width:80%;" /></div>
+      </div>
+
+      <!-- ── Background Art ────────────────────────────────────── -->
+      <div class="segment-label">Background Art</div>
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>BACKGROUND ART</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>DIGITAL</span><span>&#10022;</span>
+        <span>ENVIRONMENTS</span><span>&#10022;</span>
+      </div></div>
+      <div class="section-tile-grid">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/BG%20EXAMPLE.png" alt="Background Art 1" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/BG%20EXAMPLE%202.png" alt="Background Art 2" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/BG%20EXAMPLE%204.png" alt="Background Art 4" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/BG%20EXAMPLE%203.png" alt="Background Art 3" /></div>
+      </div>
+
+      <!-- ── Merch Design ──────────────────────────────────────── -->
+      <div class="segment-label">Merch Design</div>
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>MERCH DESIGN</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>KAPPAPON STUDIOS</span><span>&#10022;</span>
+        <span>MERCHANDISE</span><span>&#10022;</span>
+      </div></div>
+      <div class="section-tile-grid">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/2026_draculaura_ZOMIBOM_promo.png" alt="Draculaura Promo 2026" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/king%20logo.png" alt="King Logo" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/DND%20FEATHER%20FALLING%20RENDER%20SHADOW.png" alt="DnD Feather Falling Render" style="width:70%;" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Screenshot%202026-01-16%20215823.png" alt="Merch Design Screenshot" style="width:70%;" /></div>
+      </div>
+
+    </section>
+
+    <!-- STORYBOARDS -->
+    <section id="storyboards">
+      <div class="section-title">Storyboards</div>
+
+      <!-- top ticker -->
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>STORYBOARDS</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>ANIMATIC</span><span>&#10022;</span>
+        <span>BOARD ARTIST</span><span>&#10022;</span>
+      </div></div>
+
+      <div class="showcase-body">
+
+        <!-- ── FEATURED PANEL ────────────────────────────────── -->
+        <div class="showcase-featured">
+          <div class="feat-cover" id="sb-cover">
+            <div class="feat-number" id="sb-num">01</div>
+            <div class="feat-tags" id="sb-tags">
+              <span class="feat-tag accent">Storyboard</span>
+            </div>
+            <div class="play-icon">&#9654;</div>
+            <div class="placeholder-label">sb_01</div>
+          </div>
+          <div class="feat-info" id="sb-info">
+            <div class="feat-title" id="sb-title">Mauve's Backstory</div>
+            <div class="feat-role"  id="sb-role">Storyboard Artist</div>
+            <div class="feat-stats" id="sb-stats">
+              <div class="feat-stat">
+                <span class="feat-stat-label">Year</span>
+                <span class="feat-stat-value">2024</span>
+              </div>
+              <div class="feat-stat">
+                <span class="feat-stat-label">Type</span>
+                <span class="feat-stat-value">Animatic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── THUMBNAIL LIST ────────────────────────────────── -->
+        <div class="showcase-list" id="sb-list">
+          <div class="showcase-item active" data-idx="0">
+            <div class="item-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div><div class="item-overlay"><div class="item-title">Mauve's Backstory</div><div class="item-sub">Storyboard Artist</div></div></div>
+          </div>
+          <div class="showcase-item" data-idx="1">
+            <div class="item-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div><div class="item-overlay"><div class="item-title">Danya Test</div><div class="item-sub">Storyboard Artist</div></div></div>
+          </div>
+          <div class="showcase-item" data-idx="2">
+            <div class="item-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div><div class="item-overlay"><div class="item-title">Nathan Boards 1</div><div class="item-sub">Storyboard Artist</div></div></div>
+          </div>
+          <div class="showcase-item" data-idx="3">
+            <div class="item-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div><div class="item-overlay"><div class="item-title">Nathan Boards 2</div><div class="item-sub">Storyboard Artist</div></div></div>
+          </div>
+          <div class="showcase-item" data-idx="4">
+            <div class="item-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div><div class="item-overlay"><div class="item-title">Nathan Boards 3</div><div class="item-sub">Storyboard Artist</div></div></div>
+          </div>
+          <div class="showcase-item" data-idx="5">
+            <div class="item-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div><div class="item-overlay"><div class="item-title">Nathan Boards 4</div><div class="item-sub">Storyboard Artist</div></div></div>
+          </div>
+          <div class="showcase-item" data-idx="6">
+            <div class="item-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div><div class="item-overlay"><div class="item-title">Nathan Boards 5</div><div class="item-sub">Storyboard Artist</div></div></div>
+          </div>
+          <div class="showcase-item" data-idx="7">
+            <div class="item-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div><div class="item-overlay"><div class="item-title">Nathan Boards 6</div><div class="item-sub">Storyboard Artist</div></div></div>
+          </div>
+        </div><!-- /sb-list -->
+      </div><!-- /showcase-body -->
+
+      <!-- bottom ticker -->
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>STORYBOARDS</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>ANIMATIC</span><span>&#10022;</span>
+        <span>BOARD ARTIST</span><span>&#10022;</span>
+      </div></div>
+
+    </section>
+
+    <!-- ANIMATION -->
+    <section id="animation">
+      <div class="section-title">Animation</div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+        <div class="home-reel-frame" data-videoid="SJq3G4czSSo"></div>
+      </div>
+
+      <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;">
+        <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/LETS%20KILL%20TONIGHT%20MAP%20GIF.gif"
+             alt="Let's Kill Tonight MAP"
+             style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/MISSY%20MAP%202026%20GIF.gif"
+             alt="Missy MAP 2026"
+             style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+      </div>
+      <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;">
+        <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/LOLLIA%20TRANSFORMATION.gif"
+             alt="Lollia Transformation"
+             style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/RYAN%20TEST%20GIF.gif"
+             alt="Ryan Test"
+             style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+      </div>
+      <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;">
+        <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/MIDAUTUMN%20GIF.gif"
+             alt="Midautumn"
+             style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/KORY%20TEST%20GIF.gif"
+             alt="Kory Test"
+             style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+      </div>
+      <div style="display:flex;gap:12px;max-width:1400px;margin:12px auto 0;">
+        <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/valentine_orig.gif"
+             alt="Valentine"
+             style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+        <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/SNAIL%20GIRL%20GIF.gif"
+             alt="Snail Girl"
+             style="display:block;width:50%;height:auto;border:1px solid var(--purple-dark);border-radius:3px;" />
+      </div>
+      <!--
+      <div class="section-tile-grid">
+        <div class="section-tile"><div class="section-tile-ph"><div class="play-icon" style="font-size:2rem;opacity:0.25;">&#9654;</div><div class="placeholder-label">animation_01</div></div></div>
+        <div class="section-tile"><div class="section-tile-ph"><div class="play-icon" style="font-size:2rem;opacity:0.25;">&#9654;</div><div class="placeholder-label">animation_02</div></div></div>
+        <div class="section-tile"><div class="section-tile-ph"><div class="play-icon" style="font-size:2rem;opacity:0.25;">&#9654;</div><div class="placeholder-label">animation_03</div></div></div>
+        <div class="section-tile"><div class="section-tile-ph"><div class="play-icon" style="font-size:2rem;opacity:0.25;">&#9654;</div><div class="placeholder-label">animation_04</div></div></div>
+      </div>
+      -->
+    </section>
+
+    <!-- 3D MODELLING -->
+    <section id="3d">
+      <div class="section-title">3D Modelling</div>
+
+      <!-- ── Interactive View ──────────────────────────────────── -->
+      <div class="segment-label">Interactive View</div>
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>INTERACTIVE VIEW</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>3D</span><span>&#10022;</span>
+        <span>INTERACTIVE VIEWER</span><span>&#10022;</span>
+      </div></div>
+
+      <div style="display:flex;align-items:center;gap:16px;max-width:1200px;margin:0 auto 36px;">
+        <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--purple-lit);white-space:nowrap;flex-shrink:0;">
+          &#9670; Interactive &nbsp;&middot;&nbsp; Drag to orbit &nbsp;&middot;&nbsp; Scroll to zoom
+        </div>
+        <div class="viewer-wrap" id="viewer-wrap" style="margin:0;flex:1;">
+        <model-viewer
+          id="viewer-el"
+          src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/ENGENEERING%20BUILDING%203.0.glb"
+          alt="Engineering Building 3D Model"
+          camera-controls
+          auto-rotate
+          auto-rotate-delay="1500"
+          shadow-intensity="0.9"
+          interaction-prompt="none"
+          style="width:100%;height:100%;background-color:#180020;">
+        </model-viewer>
+        <div class="viewer-ph" id="viewer-ph" style="display:none;">
+          <div class="viewer-ph-icon">&#129794;</div>
+          <div class="viewer-ph-title">Interactive 3D Viewer</div>
+          <div class="viewer-ph-desc">
+            Drag a <code>.glb</code> or <code>.gltf</code> file onto this area,<br/>
+            or click the button to browse your files.
+          </div>
+          <button class="viewer-load-btn" id="viewer-load-btn">&#9654; Load Model</button>
+          <div class="viewer-ph-hint">Click &amp; drag to orbit &nbsp;&middot;&nbsp; Scroll to zoom &nbsp;&middot;&nbsp; Right-click to pan</div>
+        </div>
+        <input type="file" id="viewer-file-input" accept=".glb,.gltf" style="display:none;" />
+        </div>
+      </div>
+
+      <!-- ── Backgrounds ──────────────────────────────────────── -->
+      <div class="segment-label">Backgrounds</div>
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>BACKGROUNDS</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>3D</span><span>&#10022;</span>
+        <span>ENVIRONMENTS</span><span>&#10022;</span>
+      </div></div>
+      <div style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Software used: Blender</div>
+      <div class="section-tile-grid section-tile-grid--natural">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%201%20wireframe.png" alt="Room 1 Wireframe" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%201%20colorbox.png" alt="Room 1 Colorbox" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%202%20graybox.png" alt="Room 2 Graybox" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/room%202%20wireframe.png" alt="Room 2 Wireframe" /></div>
+      </div>
+
+      <!-- ── Items ─────────────────────────────────────────────── -->
+      <div class="segment-label">Items</div>
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>ITEMS</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>3D</span><span>&#10022;</span>
+        <span>PROPS &amp; ASSETS</span><span>&#10022;</span>
+      </div></div>
+      <div style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Software used: Blender</div>
+      <div class="section-tile-grid section-tile-grid--natural">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/ITEMS%20EXAMPLE%202.png" alt="Items Example 2" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/ITEMS%20EXAMPLE%203.png" alt="Items Example 3" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/MUSHROOMS%20.png" alt="Mushrooms" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/MUSHROOMS%202.png" alt="Mushrooms 2" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/MUSHROOMS%20WIREFRAME.png" alt="Mushrooms Wireframe" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/MUSHROOMS%202%20WIREFRAME.png" alt="Mushrooms 2 Wireframe" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/SPOON%20PAN%20.png" alt="Spoon Pan" /></div>
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/SPOON%20PAN%20WIREFRAME.png" alt="Spoon Pan Wireframe" /></div>
+      </div>
+      <div class="section-tile-grid section-tile-grid--single section-tile-grid--natural">
+        <div class="section-tile"><img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/ITEMS%20EXAMPLE%201.png" alt="Items Example 1" style="width:80%;" /></div>
+      </div>
+
+      <!-- ── 3D Animation ──────────────────────────────────────── -->
+      <div class="segment-label">3D Animation</div>
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>3D ANIMATION</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>ANIMATION</span><span>&#10022;</span>
+        <span>PERSONAL</span><span>&#10022;</span>
+      </div></div>
+      <div class="section-tile-grid section-tile-grid--natural">
+        <div class="section-tile" style="flex-direction:column;align-items:stretch;">
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/3d%20anim%20test%20clip.gif" alt="3D Anim Test Clip" />
+          <div style="padding:6px 10px;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--purple-dark);text-align:center;">Software used: Clip Studio Paint</div>
+        </div>
+        <div class="section-tile" style="flex-direction:column;align-items:stretch;">
+          <img src="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/zelda%20test%20anime%202025.gif" alt="Zelda Test Anime 2025" />
+          <div style="padding:6px 10px;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--purple-dark);text-align:center;">Software used: Blender &nbsp;&middot;&nbsp; Model Credit: @artstoff</div>
+        </div>
+      </div>
+
+      <!--
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>MODEL COLLECTION</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>GLB &amp; GLTF</span><span>&#10022;</span>
+        <span>3D ASSETS</span><span>&#10022;</span>
+      </div></div>
+
+      <div class="model-shop">
+        <div class="model-shop-header">Model Collection</div>
+        <div class="model-shop-row" id="model-shop-row">
+          <div class="model-card active" data-src="">
+            <div class="model-card-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.2;">&#129794;</div></div>
+            <div class="model-card-body">
+              <div class="model-card-name">Model 01</div>
+              <div class="model-card-stat"><span class="model-card-stat-icon">&#9670;</span><span>12,450 tris</span></div>
+            </div>
+          </div>
+          <div class="model-card" data-src="">
+            <div class="model-card-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.2;">&#129794;</div></div>
+            <div class="model-card-body">
+              <div class="model-card-name">Model 02</div>
+              <div class="model-card-stat"><span class="model-card-stat-icon">&#9670;</span><span>8,320 tris</span></div>
+            </div>
+          </div>
+          <div class="model-card" data-src="">
+            <div class="model-card-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.2;">&#129794;</div></div>
+            <div class="model-card-body">
+              <div class="model-card-name">Model 03</div>
+              <div class="model-card-stat"><span class="model-card-stat-icon">&#9670;</span><span>5,680 tris</span></div>
+            </div>
+          </div>
+          <div class="model-card" data-src="">
+            <div class="model-card-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.2;">&#129794;</div></div>
+            <div class="model-card-body">
+              <div class="model-card-name">Model 04</div>
+              <div class="model-card-stat"><span class="model-card-stat-icon">&#9670;</span><span>22,100 tris</span></div>
+            </div>
+          </div>
+          <div class="model-card" data-src="">
+            <div class="model-card-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.2;">&#129794;</div></div>
+            <div class="model-card-body">
+              <div class="model-card-name">Model 05</div>
+              <div class="model-card-stat"><span class="model-card-stat-icon">&#9670;</span><span>3,200 tris</span></div>
+            </div>
+          </div>
+          <div class="model-card" data-src="">
+            <div class="model-card-thumb"><div class="placeholder-icon" style="font-size:1.4rem;opacity:0.2;">&#129794;</div></div>
+            <div class="model-card-body">
+              <div class="model-card-name">Model 06</div>
+              <div class="model-card-stat"><span class="model-card-stat-icon">&#9670;</span><span>16,750 tris</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+    </section>
+
+    <!-- PREVIOUS PROJECTS -->
+    <section id="projects">
+      <div class="section-title">Previous Projects</div>
+
+      <!-- top ticker -->
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>PREVIOUS WORKS</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>PORTFOLIO</span><span>&#10022;</span>
+        <span>KAPPAPON STUDIOS</span><span>&#10022;</span>
+      </div></div>
+
+      <div class="showcase-body">
+
+        <!-- ── FEATURED PANEL ─────────────────────────────── -->
+        <div class="showcase-featured">
+          <div class="feat-cover" id="feat-cover">
+            <div class="feat-number" id="feat-number">01</div>
+            <div class="feat-tags" id="feat-tags">
+              <span class="feat-tag accent">Animation</span>
+              <span class="feat-tag">Original</span>
+            </div>
+            <!-- media injected by showcase JS -->
+            <div class="play-icon">&#9654;</div>
+            <div class="placeholder-label">video_01</div>
+          </div>
+          <div class="feat-info" id="feat-info">
+            <div class="feat-title" id="feat-title">Project Title Here</div>
+            <div class="feat-role"  id="feat-role">Animator / Artist</div>
+            <div class="feat-stats" id="feat-stats">
+              <div class="feat-stat">
+                <span class="feat-stat-label">Year</span>
+                <span class="feat-stat-value">2024</span>
+              </div>
+              <div class="feat-stat">
+                <span class="feat-stat-label">Medium</span>
+                <span class="feat-stat-value">Digital 2D</span>
+              </div>
+              <div class="feat-stat">
+                <span class="feat-stat-label">Type</span>
+                <span class="feat-stat-value">Short Film</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── THUMBNAIL LIST ─────────────────────────────── -->
+        <div class="showcase-list" id="showcase-list">
+
+          <div class="showcase-item active" data-idx="0">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">Helluva Boss Shorts 13</div><div class="item-sub">Rough Animator</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="1">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">Perfect Performance</div><div class="item-sub">Voice Actor</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="2">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">Slim Pickings</div><div class="item-sub">Board / Clean Up / BG / Editor</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="3">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">Helluva Boss Shorts 12</div><div class="item-sub">Rough Animator</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="4">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">3 (NOT) Normal Siblings</div><div class="item-sub">Board Artist</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="5">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">Lullaby for Agy</div><div class="item-sub">Concept Artist / Illustrator</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="6">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">Monkey Wrench Ep4</div><div class="item-sub">Rough Animator</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="7">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">Helluva Boss S2 Ep 10</div><div class="item-sub">Rough Animator</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="8">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">Satina Ep 4</div><div class="item-sub">Clean Up</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="9">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">My Weird Childhood</div><div class="item-sub">Board Artist</div></div>
+            </div>
+          </div>
+
+          <div class="showcase-item" data-idx="10">
+            <div class="item-thumb">
+              <div class="placeholder-icon" style="font-size:1.4rem;opacity:0.18;">&#9654;</div>
+              <div class="item-overlay"><div class="item-title">Midautumn Trailer</div><div class="item-sub">Board Artist / Rough Animator</div></div>
+            </div>
+          </div>
+
+        </div><!-- /showcase-list -->
+      </div><!-- /showcase-body -->
+
+      <!-- bottom ticker -->
+      <div class="showcase-ticker"><div class="showcase-ticker-inner">
+        <span>PREVIOUS WORKS</span><span>&#10022;</span>
+        <span>ZOMIBOM</span><span>&#10022;</span>
+        <span>PORTFOLIO</span><span>&#10022;</span>
+        <span>KAPPAPON STUDIOS</span><span>&#10022;</span>
+      </div></div>
+
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ───────────────────────────────────────── -->
+  <div style="text-align:center;padding:6px 0 2px;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);opacity:0.5;">Code by ZOMIBOM &nbsp;·&nbsp; <a id="refs-link" href="#" style="color:inherit;text-decoration:underline;cursor:pointer;">References Used</a></div>
+  <footer>
+    <a class="socials-btn" href="https://z0mibom.carrd.co/" target="_blank" rel="noopener noreferrer">
+      ✦ Socials
+    </a>
+    <a class="socials-btn" href="https://file.garden/aey-N5TVfgRwRQeJ/PRIVATE/PORTFOLIO/Zomi%20CV%202025.pdf" target="_blank" rel="noopener noreferrer" download>
+      &#x2913; CV
+    </a>
+    <a class="socials-btn" href="mailto:zomibom.animator@gmail.com">
+      ✉ Contact
+    </a>
+  </footer>
+
+  <!-- ─── TAB SWITCHING ────────────────────────────────── -->
+  <script>
+    // ─── LAZY LOAD images in hidden sections ───────────────────────
+    // Runs before browser fetches images in display:none sections
+    (function () {
+      document.querySelectorAll('section:not(.active) img').forEach(function (img) {
+        img.loading = 'lazy';
+      });
+    }());
+
+    const nav = document.getElementById('main-nav');
+    const tabs = nav.querySelectorAll('button[data-tab]');
+    const sections = document.querySelectorAll('main > section');
+    const mainEl = document.querySelector('main');
+
+    function setHomeMode(isHome) {
+      mainEl.classList.toggle('home-mode', isHome);
+    }
+
+    // Initialise — home is active on load
+    setHomeMode(true);
+
+    nav.addEventListener('click', function (e) {
+      const btn = e.target.closest('button[data-tab]');
+      if (!btn) return;
+
+      const target = btn.dataset.tab;
+
+      // Update active tab button
+      tabs.forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Show matching section
+      sections.forEach(s => {
+        s.classList.toggle('active', s.id === target);
+      });
+
+      setHomeMode(target === 'home');
+      window.scrollTo(0, 0);
+    });
+
+    // ─── LITE EMBED HELPER ──────────────────────────────────────
+    // Shows a crisp thumbnail + play button; swaps for real iframe on click
+    function makeLiteEmbed(videoId, container, anchorEl) {
+      var thumbs = [
+        'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg',
+        'https://img.youtube.com/vi/' + videoId + '/sddefault.jpg',
+        'https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg'
+      ];
+      var lite = document.createElement('div');
+      lite.className = 'yt-lite';
+      lite.innerHTML = '<div class="yt-lite-play">&#9654;</div>';
+
+      (function tryThumb(i) {
+        if (i >= thumbs.length) return;
+        var img = new Image();
+        img.onload = function () {
+          // YouTube returns 120×90 for maxresdefault on private/unavailable videos — skip it
+          if (this.naturalWidth <= 120) { tryThumb(i + 1); return; }
+          lite.style.backgroundImage = 'url(' + thumbs[i] + ')';
+        };
+        img.onerror = function () { tryThumb(i + 1); };
+        img.src = thumbs[i];
+      }(0));
+
+      lite.addEventListener('click', function () {
+        var fr = document.createElement('iframe');
+        fr.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+        fr.setAttribute('allowfullscreen', '');
+        fr.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        fr.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
+        lite.replaceWith(fr);
+      });
+
+      container.insertBefore(lite, anchorEl);
+    }
+
+    // Initialise all home-reel-frame elements that carry a video ID
+    document.querySelectorAll('.home-reel-frame[data-videoid]').forEach(function (el) {
+      makeLiteEmbed(el.dataset.videoid, el, null);
+    });
+
+    // ─── PROJECT SHOWCASE ──────────────────────────────────
+    (function () {
+      var projects = [
+        {
+          number: '01',
+          title:  'Helluva Boss Shorts 13',
+          role:   'Rough Animator',
+          tags:   [
+            { label: 'Animation', accent: true  },
+            { label: 'Spindlehorse', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2026'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: 'ZAkGmkP9j5c'
+        },
+        {
+          number: '02',
+          title:  'Perfect Performance',
+          role:   'Voice Actor',
+          tags:   [
+            { label: 'Voice Acting', accent: true },
+            { label: 'Daybreak', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2026'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: 'vJ8L6M62DHM'
+        },
+        {
+          number: '03',
+          title:  'Slim Pickings',
+          role:   'Board / Clean Up / BG / Editor',
+          tags:   [
+            { label: 'Animation', accent: true },
+            { label: 'Daybreak', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2026'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: 'M7sLlMsb54g'
+        },
+        {
+          number: '04',
+          title:  'Helluva Boss Shorts 12',
+          role:   'Rough Animator',
+          tags:   [
+            { label: 'Animation', accent: true },
+            { label: 'Spindlehorse', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2026'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: '4kJXWQWW-og'
+        },
+        {
+          number: '05',
+          title:  '3 (NOT) Normal Siblings',
+          role:   'Board Artist',
+          tags:   [
+            { label: 'Storyboard', accent: true },
+            { label: 'BrodyAnimates', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2026'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: 'D_R82_5YPu8'
+        },
+        {
+          number: '06',
+          title:  'Lullaby for Agy',
+          role:   'Concept Artist / Illustrator',
+          tags:   [
+            { label: 'Concept Art', accent: true },
+            { label: 'RC', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2025'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: '48F-j7nxTxs'
+        },
+        {
+          number: '07',
+          title:  'Monkey Wrench Ep4',
+          role:   'Rough Animator',
+          tags:   [
+            { label: 'Animation', accent: true },
+            { label: 'Zeurel', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2025'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: 'cCAJ7DOVIL0'
+        },
+        {
+          number: '08',
+          title:  'Helluva Boss S2 Ep 10',
+          role:   'Rough Animator',
+          tags:   [
+            { label: 'Animation', accent: true },
+            { label: 'Spindlehorse', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2026'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: '5DV4IIKwqRI'
+        },
+        {
+          number: '09',
+          title:  'Satina Ep 4',
+          role:   'Clean Up',
+          tags:   [
+            { label: 'Animation', accent: true },
+            { label: 'Scumhouse', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2024'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: 'tuPmXjKZ438'
+        },
+        {
+          number: '10',
+          title:  'My Weird Childhood',
+          role:   'Board Artist',
+          tags:   [
+            { label: 'Storyboard', accent: true },
+            { label: 'Infamous Swoosh', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2024'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Animation'  }
+          ],
+          videoId: 'o88qXQvSyuA'
+        },
+        {
+          number: '11',
+          title:  'Midautumn Trailer',
+          role:   'Board Artist / Rough Animator',
+          tags:   [
+            { label: 'Animation', accent: true },
+            { label: 'Midautumn', accent: false }
+          ],
+          stats:  [
+            { label: 'Year',   value: '2022'       },
+            { label: 'Medium', value: 'Digital 2D' },
+            { label: 'Type',   value: 'Trailer'    }
+          ],
+          videoId: 'zSOtLxNbWrA'
+        }
+      ];
+
+      var featCover  = document.getElementById('feat-cover');
+      var featNumber = document.getElementById('feat-number');
+      var featTags   = document.getElementById('feat-tags');
+      var featInfo   = document.getElementById('feat-info');
+      var featTitle  = document.getElementById('feat-title');
+      var featRole   = document.getElementById('feat-role');
+      var featStats  = document.getElementById('feat-stats');
+      var list       = document.getElementById('showcase-list');
+      if (!featCover || !list) return;
+
+      var items   = list.querySelectorAll('.showcase-item');
+      var current = 0;
+
+      function updateCoverMedia(p, idx) {
+        var oldIframe = featCover.querySelector('iframe');
+        if (oldIframe) { oldIframe.src = ''; oldIframe.remove(); }
+        var oldLite = featCover.querySelector('.yt-lite');
+        if (oldLite) oldLite.remove();
+        var old = featCover.querySelectorAll('.play-icon, .placeholder-label, .placeholder-icon');
+        old.forEach(function (el) { el.remove(); });
+
+        if (p.videoId) {
+          makeLiteEmbed(p.videoId, featCover, featNumber);
+        } else {
+          var icon = document.createElement('div');
+          icon.className = 'play-icon';
+          icon.textContent = '\u25b6';
+          var lbl = document.createElement('div');
+          lbl.className = 'placeholder-label';
+          lbl.textContent = 'video_0' + (idx + 1);
+          featCover.insertBefore(lbl,  featTags);
+          featCover.insertBefore(icon, featTags);
+        }
+      }
+
+      function switchTo(index, animate) {
+        var p = projects[index];
+        if (!p) return;
+
+        if (animate) {
+          featCover.style.opacity = '0';
+          featInfo.style.opacity  = '0';
+        }
+
+        setTimeout(function () {
+          featNumber.textContent = p.number;
+
+          featTags.innerHTML = p.tags.map(function (t) {
+            return '<span class="feat-tag' + (t.accent ? ' accent' : '') + '">' + t.label + '</span>';
+          }).join('');
+
+          featTitle.textContent = p.title;
+          featRole.textContent  = p.role;
+
+          featStats.innerHTML = p.stats.map(function (s) {
+            return '<div class="feat-stat">' +
+              '<span class="feat-stat-label">' + s.label + '</span>' +
+              '<span class="feat-stat-value">' + s.value + '</span>' +
+              '</div>';
+          }).join('');
+
+          updateCoverMedia(p, index);
+
+          if (animate) {
+            featCover.style.opacity = '1';
+            featInfo.style.opacity  = '1';
+          }
+        }, animate ? 230 : 0);
+
+        items.forEach(function (item, i) {
+          item.classList.toggle('active', i === index);
+        });
+
+        current = index;
+      }
+
+      items.forEach(function (item, i) {
+        var p = projects[i];
+        if (p && p.videoId) {
+          var thumb = item.querySelector('.item-thumb');
+          var img = document.createElement('img');
+          img.src = 'https://img.youtube.com/vi/' + p.videoId + '/maxresdefault.jpg';
+          img.alt = p.title;
+          img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;';
+          img.onerror = function () {
+            this.onerror = null;
+            this.src = 'https://img.youtube.com/vi/' + p.videoId + '/hqdefault.jpg';
+          };
+          thumb.insertBefore(img, thumb.firstChild);
+        }
+        item.addEventListener('click', function () {
+          if (i === current) return;
+          switchTo(i, true);
+        });
+      });
+
+      // Sync JS data → initial HTML state
+      switchTo(0, false);
+    }());
+
+    // ─── 3D VIEWER ────────────────────────────────────────
+    (function () {
+      var wrap    = document.getElementById('viewer-wrap');
+      var viewerEl = document.getElementById('viewer-el');
+      var ph      = document.getElementById('viewer-ph');
+      var loadBtn = document.getElementById('viewer-load-btn');
+      var fileInp = document.getElementById('viewer-file-input');
+      if (!wrap || !viewerEl) return;
+
+      var blobURL = null;
+
+      function loadModel(file) {
+        if (!file) return;
+        var n = file.name.toLowerCase();
+        if (!n.endsWith('.glb') && !n.endsWith('.gltf')) return;
+        if (blobURL) URL.revokeObjectURL(blobURL);
+        blobURL = URL.createObjectURL(file);
+        viewerEl.setAttribute('src', blobURL);
+        ph.style.display = 'none';
+      }
+
+      loadBtn.addEventListener('click', function () { fileInp.click(); });
+      fileInp.addEventListener('change', function () { loadModel(this.files[0]); });
+
+      wrap.addEventListener('dragover', function (e) {
+        e.preventDefault();
+        wrap.classList.add('drag-over');
+      });
+
+      wrap.addEventListener('dragleave', function (e) {
+        if (!wrap.contains(e.relatedTarget)) wrap.classList.remove('drag-over');
+      });
+
+      wrap.addEventListener('drop', function (e) {
+        e.preventDefault();
+        wrap.classList.remove('drag-over');
+        loadModel(e.dataTransfer.files[0]);
+      });
+    }());
+
+    // ─── GENERIC GALLERY SWITCHER ──────────────────────────────
+    function makeGallery(cfg) {
+      var coverEl = document.getElementById(cfg.cover);
+      var numEl   = document.getElementById(cfg.num);
+      var tagsEl  = document.getElementById(cfg.tags);
+      var infoEl  = document.getElementById(cfg.info);
+      var titleEl = document.getElementById(cfg.title);
+      var roleEl  = document.getElementById(cfg.role);
+      var statsEl = document.getElementById(cfg.stats);
+      var listEl  = document.getElementById(cfg.list);
+      if (!coverEl || !listEl) return;
+
+      var items   = listEl.querySelectorAll('.showcase-item');
+      var current = 0;
+
+      function setMedia(item) {
+        var src = item.getAttribute('data-src')   || '';
+        var lbl = item.getAttribute('data-label') || '';
+        var old = coverEl.querySelectorAll('img, iframe, .placeholder-icon, .placeholder-label, .play-icon');
+        old.forEach(function (el) { el.remove(); });
+
+        if (src) {
+          if (cfg.isVideo) {
+            var fr = document.createElement('iframe');
+            fr.src = 'https://www.youtube.com/embed/' + src;
+            fr.setAttribute('allowfullscreen', '');
+            fr.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            fr.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
+            coverEl.insertBefore(fr, numEl);
+          } else {
+            var img = document.createElement('img');
+            img.src = src;
+            img.alt = item.getAttribute('data-title') || '';
+            coverEl.insertBefore(img, numEl);
+          }
+        } else {
+          if (cfg.isVideo) {
+            var icon = document.createElement('div');
+            icon.className = 'play-icon';
+            icon.style.opacity = '0.22';
+            icon.textContent = '\u25b6';
+            coverEl.insertBefore(icon, numEl);
+          }
+          var lblEl = document.createElement('div');
+          lblEl.className = 'placeholder-label';
+          lblEl.textContent = lbl;
+          coverEl.insertBefore(lblEl, numEl);
+        }
+      }
+
+      function go(i, animate) {
+        var item = items[i];
+        if (!item) return;
+
+        if (animate) {
+          coverEl.style.opacity = '0';
+          infoEl.style.opacity  = '0';
+        }
+
+        setTimeout(function () {
+          var n = String(i + 1);
+          numEl.textContent = n.length < 2 ? '0' + n : n;
+
+          var rawTags = (item.getAttribute('data-tags')   || '').split('|');
+          var rawAcc  = (item.getAttribute('data-accent') || '').split('|');
+          tagsEl.innerHTML = rawTags.filter(function (t) { return t.trim(); }).map(function (t) {
+            t = t.trim();
+            var acc = rawAcc.map(function (a) { return a.trim(); }).indexOf(t) >= 0;
+            return '<span class="feat-tag' + (acc ? ' accent' : '') + '">' + t + '</span>';
+          }).join('');
+
+          titleEl.textContent = item.getAttribute('data-title') || 'Untitled';
+          roleEl.textContent  = item.getAttribute('data-role')  || '';
+
+          var keys = ['year','medium','type','duration','software'];
+          var caps = {year:'Year',medium:'Medium',type:'Type',duration:'Duration',software:'Software'};
+          statsEl.innerHTML = keys.map(function (k) {
+            var v = item.getAttribute('data-' + k);
+            return v ? '<div class="feat-stat"><span class="feat-stat-label">'+caps[k]+'</span><span class="feat-stat-value">'+v+'</span></div>' : '';
+          }).join('');
+
+          setMedia(item);
+
+          if (animate) {
+            coverEl.style.opacity = '1';
+            infoEl.style.opacity  = '1';
+          }
+        }, animate ? 230 : 0);
+
+        items.forEach(function (el, j) { el.classList.toggle('active', j === i); });
+        current = i;
+      }
+
+      items.forEach(function (el, i) {
+        el.addEventListener('click', function () { if (i !== current) go(i, true); });
+      });
+
+      go(0, false);
+    }
+
+    // ─── STORYBOARDS SHOWCASE ──────────────────────────────────
+    (function () {
+      var boards = [
+        { number:'01', title:"Mauve's Backstory",  role:'Storyboard Artist', tags:[{label:'Storyboard',accent:true}], stats:[{label:'Year',value:'2024'},{label:'Type',value:'Animatic'}], videoId:'1YOE6gom88U' },
+        { number:'02', title:'Danya Test',          role:'Storyboard Artist', tags:[{label:'Storyboard',accent:true}], stats:[{label:'Year',value:'2024'},{label:'Type',value:'Animatic'}], videoId:'RtCSnTn0AzA' },
+        { number:'03', title:'Nathan Boards 1',     role:'Storyboard Artist', tags:[{label:'Storyboard',accent:true}], stats:[{label:'Year',value:'2024'},{label:'Type',value:'Animatic'}], videoId:'JoNzzeqYNk4' },
+        { number:'04', title:'Nathan Boards 2',     role:'Storyboard Artist', tags:[{label:'Storyboard',accent:true}], stats:[{label:'Year',value:'2024'},{label:'Type',value:'Animatic'}], videoId:'CuIKfHFHVrw' },
+        { number:'05', title:'Nathan Boards 3',     role:'Storyboard Artist', tags:[{label:'Storyboard',accent:true}], stats:[{label:'Year',value:'2024'},{label:'Type',value:'Animatic'}], videoId:'8gJahLjD_gw' },
+        { number:'06', title:'Nathan Boards 4',     role:'Storyboard Artist', tags:[{label:'Storyboard',accent:true}], stats:[{label:'Year',value:'2024'},{label:'Type',value:'Animatic'}], videoId:'wE1P4vQ4xpU' },
+        { number:'07', title:'Nathan Boards 5',     role:'Storyboard Artist', tags:[{label:'Storyboard',accent:true}], stats:[{label:'Year',value:'2024'},{label:'Type',value:'Animatic'}], videoId:'gjI5jCln4xY' },
+        { number:'08', title:'Nathan Boards 6',     role:'Storyboard Artist', tags:[{label:'Storyboard',accent:true}], stats:[{label:'Year',value:'2024'},{label:'Type',value:'Animatic'}], videoId:'cB419eK-W8I' }
+      ];
+
+      var sbCover = document.getElementById('sb-cover');
+      var sbNum   = document.getElementById('sb-num');
+      var sbTags  = document.getElementById('sb-tags');
+      var sbInfo  = document.getElementById('sb-info');
+      var sbTitle = document.getElementById('sb-title');
+      var sbRole  = document.getElementById('sb-role');
+      var sbStats = document.getElementById('sb-stats');
+      var sbList  = document.getElementById('sb-list');
+      if (!sbCover || !sbList) return;
+
+      var items   = sbList.querySelectorAll('.showcase-item');
+      var current = 0;
+
+      function updateMedia(b) {
+        var old = sbCover.querySelectorAll('iframe, .yt-lite, .play-icon, .placeholder-label, .placeholder-icon');
+        old.forEach(function (el) { el.remove(); });
+        if (b.videoId) {
+          makeLiteEmbed(b.videoId, sbCover, sbNum);
+        }
+      }
+
+      function switchTo(index, animate) {
+        var b = boards[index];
+        if (!b) return;
+        if (animate) { sbCover.style.opacity = '0'; sbInfo.style.opacity = '0'; }
+        setTimeout(function () {
+          sbNum.textContent = b.number;
+          sbTags.innerHTML = b.tags.map(function (t) {
+            return '<span class="feat-tag' + (t.accent ? ' accent' : '') + '">' + t.label + '</span>';
+          }).join('');
+          sbTitle.textContent = b.title;
+          sbRole.textContent  = b.role;
+          sbStats.innerHTML = b.stats.map(function (s) {
+            return '<div class="feat-stat"><span class="feat-stat-label">' + s.label + '</span><span class="feat-stat-value">' + s.value + '</span></div>';
+          }).join('');
+          updateMedia(b);
+          if (animate) { sbCover.style.opacity = '1'; sbInfo.style.opacity = '1'; }
+        }, animate ? 230 : 0);
+        items.forEach(function (el, i) { el.classList.toggle('active', i === index); });
+        current = index;
+      }
+
+      items.forEach(function (item, i) {
+        var b = boards[i];
+        if (b && b.videoId) {
+          var thumb = item.querySelector('.item-thumb');
+          var img = document.createElement('img');
+          img.src = 'https://img.youtube.com/vi/' + b.videoId + '/maxresdefault.jpg';
+          img.alt = b.title;
+          img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;';
+          img.onerror = function () { this.onerror = null; this.src = 'https://img.youtube.com/vi/' + b.videoId + '/hqdefault.jpg'; };
+          thumb.insertBefore(img, thumb.firstChild);
+        }
+        item.addEventListener('click', function () { if (i !== current) switchTo(i, true); });
+      });
+
+      switchTo(0, false);
+    }());
+
+    // ─── MODEL SHOP CARD SELECTION ────────────────────────────
+    (function () {
+      var row    = document.getElementById('model-shop-row');
+      var viewer = document.getElementById('viewer-el');
+      var ph     = document.getElementById('viewer-ph');
+      if (!row) return;
+
+      var cards   = row.querySelectorAll('.model-card');
+      var current = 0;
+
+      cards.forEach(function (card, i) {
+        card.addEventListener('click', function () {
+          if (i === current) return;
+          cards.forEach(function (c) { c.classList.remove('active'); });
+          card.classList.add('active');
+          current = i;
+          var src = card.getAttribute('data-src');
+          if (src && viewer) {
+            viewer.setAttribute('src', src);
+            if (ph) ph.style.display = 'none';
+          }
+        });
+      });
+    }());
+
+    // ─── MOBILE NAV TOGGLE ───────────────────────────────
+    (function () {
+      var toggle = document.getElementById('nav-toggle');
+      var navEl  = document.getElementById('main-nav');
+      if (!toggle || !navEl) return;
+      toggle.addEventListener('click', function () {
+        var open = navEl.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      // Close when a tab is selected
+      navEl.addEventListener('click', function (e) {
+        if (e.target.closest('button[data-tab]')) {
+          navEl.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }());
+
+    // ─── DRAG TO SCROLL (thumbnail strips) ────────────────────
+    (function () {
+      document.querySelectorAll('.showcase-list').forEach(function (el) {
+        var isDown   = false;
+        var startX   = 0;
+        var scrollLeft = 0;
+        var hasDragged = false;
+
+        el.addEventListener('mousedown', function (e) {
+          isDown = true;
+          hasDragged = false;
+          el.style.cursor = 'grabbing';
+          startX     = e.pageX - el.getBoundingClientRect().left;
+          scrollLeft = el.scrollLeft;
+        });
+
+        window.addEventListener('mouseup', function () {
+          if (!isDown) return;
+          isDown = false;
+          el.style.cursor = '';
+        });
+
+        el.addEventListener('mousemove', function (e) {
+          if (!isDown) return;
+          var x    = e.pageX - el.getBoundingClientRect().left;
+          var walk = x - startX;
+          if (Math.abs(walk) > 4) hasDragged = true;
+          el.scrollLeft = scrollLeft - walk;
+        });
+
+        // Suppress thumbnail click if the user was dragging
+        el.addEventListener('click', function (e) {
+          if (hasDragged) {
+            e.stopPropagation();
+            hasDragged = false;
+          }
+        }, true);
+      });
+    }());
+
+    // ─── LIGHTBOX ────────────────────────────────────────
+    (function () {
+      var overlay = document.getElementById('lb-overlay');
+      var lbImg   = document.getElementById('lb-img');
+      var lbClose = document.getElementById('lb-close');
+      if (!overlay) return;
+
+      function open(src, alt) {
+        lbImg.src = src;
+        lbImg.alt = alt || '';
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        overlay.classList.remove('open');
+        lbImg.src = '';
+        document.body.style.overflow = '';
+      }
+
+      lbClose.addEventListener('click', close);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) close();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') close();
+      });
+
+      // Attach to all content images
+      document.querySelectorAll('.section-tile img, .home-content img').forEach(function (img) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function (e) {
+          e.stopPropagation();
+          open(this.src, this.alt);
+        });
+      });
+    }());
+  </script>
+
+  <!-- ─── LIGHTBOX OVERLAY ─────────────────────────────── -->
+  <div id="lb-overlay" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button id="lb-close" aria-label="Close">&#x2715;</button>
+    <img id="lb-img" src="" alt="" />
+  </div>
+
+  <!-- ─── REFERENCES MODAL ─────────────────────────────── -->
+  <div id="refs-overlay" role="dialog" aria-modal="true" aria-label="References used" style="display:none;position:fixed;inset:0;z-index:9000;background:rgba(13,0,16,0.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);overflow-y:auto;">
+    <div style="max-width:680px;margin:60px auto;padding:32px 28px;background:var(--bg-card);border:1px solid var(--purple-dark);border-left:3px solid var(--pink);position:relative;">
+      <button id="refs-close" aria-label="Close" style="position:absolute;top:14px;right:16px;background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer;line-height:1;">&#x2715;</button>
+      <h2 style="font-size:0.75rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--pink);margin:0 0 20px;">References Used</h2>
+
+      <div style="color:var(--muted);font-size:0.72rem;letter-spacing:0.1em;line-height:2;">
+
+        <p style="color:var(--purple-lit);letter-spacing:0.18em;text-transform:uppercase;font-size:0.65rem;margin:0 0 6px;">Showcase &amp; Inspiration</p>
+        <ul style="list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:4px;">
+          <li><a href="https://neocities.org/browse" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">neocities.org/browse</a> — community hand-coded sites</li>
+          <li><a href="https://onepagelove.com" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">onepagelove.com</a> — curated single-page sites</li>
+          <li><a href="https://www.awwwards.com" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">awwwards.com</a> — high-end portfolio showcase</li>
+        </ul>
+
+        <p style="color:var(--purple-lit);letter-spacing:0.18em;text-transform:uppercase;font-size:0.65rem;margin:0 0 6px;">CSS / JS Techniques</p>
+        <ul style="list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:4px;">
+          <li><a href="https://css-tricks.com/a-complete-guide-to-custom-properties/" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">css-tricks.com</a> — CSS custom properties guide</li>
+          <li><a href="https://css-tricks.com/almanac/properties/s/scrollbar/" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">css-tricks.com/scrollbar</a> — custom scrollbar styling</li>
+          <li><a href="https://glassmorphism.com" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">glassmorphism.com</a> — backdrop-filter / glass effect</li>
+          <li><a href="https://codepen.io/search/pens?q=css+ticker" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">codepen.io</a> — CSS ticker / marquee examples</li>
+          <li><a href="https://codepen.io/search/pens?q=drag+to+scroll" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">codepen.io</a> — drag-to-scroll JS examples</li>
+        </ul>
+
+        <p style="color:var(--purple-lit);letter-spacing:0.18em;text-transform:uppercase;font-size:0.65rem;margin:0 0 6px;">3D / Libraries</p>
+        <ul style="list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:4px;">
+          <li><a href="https://modelviewer.dev" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">modelviewer.dev</a> — model-viewer web component docs</li>
+        </ul>
+
+        <p style="color:var(--purple-lit);letter-spacing:0.18em;text-transform:uppercase;font-size:0.65rem;margin:0 0 6px;">Similar Portfolios</p>
+        <ul style="list-style:none;padding:0;margin:0 0 4px;display:flex;flex-direction:column;gap:4px;">
+          <li><a href="https://ncase.me" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">ncase.me</a> — Nicky Case, creative hand-coded site</li>
+          <li><a href="https://maggieappleton.com" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">maggieappleton.com</a> — digital garden / illustration portfolio</li>
+          <li><a href="https://neocities.org/browse?tag=portfolio" target="_blank" rel="noopener noreferrer" style="color:var(--purple-lit);">neocities.org — portfolio tag</a> — hand-coded artist portfolios</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var overlay = document.getElementById('refs-overlay');
+      var openBtn = document.getElementById('refs-link');
+      var closeBtn = document.getElementById('refs-close');
+      openBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      });
+      function closeRefs() {
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+      closeBtn.addEventListener('click', closeRefs);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeRefs();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && overlay.style.display === 'block') closeRefs();
+      });
+    }());
+  </script>
+
+</body>
+</html>
